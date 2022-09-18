@@ -2,7 +2,7 @@
 
 This is a sample SDL2 project with a green square that can be moved on the screen using the keyboard directional keys.
 
-The square can also have is speed increased or decreased.
+The square can also have its speed increased or decreased.
 
 Also, a simple off-screen detection is implemented in order to not allow the square going off-screen.
 
