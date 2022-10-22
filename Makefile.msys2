@@ -1,0 +1,24 @@
+SRC_DIR = src
+BUILD_DIR = build/debug
+CC = g++
+SRC_FILES = $(wildcard $(SRC_DIR)/*.cpp)
+OBJ_NAME = play
+CPPFLAGS = -Iincludes -Isrc/headers 
+LDFLAGS = -std=c++17 -Wall -O0 -g -pthread
+LDLIBS = -lSDL2 -lSDL2_image
+
+CC = gcc
+CXX =g++
+RM=rm -rf
+SRC_DIR = src
+BUILD_DIR = build
+MAIN_FILE = $(SRC_DIR)/main.cpp
+SRCS = $(wildcard $(SRC_DIR)/impl/*.cpp $(SRC_DIR)/impl/**/*.cpp $(SRC_DIR)/impl/**/**/*.cpp)
+OBJ_NAME = game
+CPPFLAGS = -Iincludes -Isrc/headers -IC:\\msys64\\mingw64\\include\\SDL2 -LC:\\msys64\\mingw64\\lib
+LDFLAGS = -std=c++17 -Wall -O0 -g -pthread
+LDLIBS = -lSDL2 -lSDL2_image
+
+all:
+	$(CXX) $(LDFLAGS) $(CPPFLAGS) $(SRCS) $(MAIN_FILE) -o $(BUILD_DIR)/$(OBJ_NAME) $(LDLIBS)
+	
